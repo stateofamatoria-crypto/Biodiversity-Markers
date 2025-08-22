@@ -1,44 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Biodiversity Markers</title>
-  <link rel='stylesheet' href='https://unpkg.com/leaflet/dist/leaflet.css'>
-<link rel='stylesheet' href='https://unpkg.com/leaflet-draw/dist/leaflet.draw.css'><link rel="stylesheet" href="./style.css">
 
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+  <!-- Leaflet Draw CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet-draw/dist/leaflet.draw.css">
+  <!-- Your CSS -->
+  <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-<!-- partial:index.partial.html -->
-<div style="display: flex; height: 500px;">
-  <div id="map" style="flex: 2;"></div>
-  <div style="flex: 1; padding: 10px; border-left: 1px solid #023ad9; overflow-y: auto;">
-    <input type="text" id="cityInput" placeholder="Enter city name" style="width: 100%; margin-bottom: 10px;">
-    <button id="loadCity" style="width: 100%;">Load Biodiversity</button>
+  <div style="display: flex; height: 500px;">
+    <div id="map" style="flex: 2;"></div>
+    <div style="flex: 1; padding: 10px; border-left: 1px solid #023ad9; overflow-y: auto;">
+      <input type="text" id="cityInput" placeholder="Enter city name" style="width: 100%; margin-bottom: 10px;">
+      <button id="loadCity" style="width: 100%;">Load Biodiversity</button>
 
-    <h4>Filters</h4>
-    <label><input type="checkbox" class="filter" value="Bird"> Bird</label>
-    <label><input type="checkbox" class="filter" value="Mammal"> Mammal</label>
-    <label><input type="checkbox" class="filter" value="Plant"> Plant</label>
-    <label><input type="checkbox" class="filter" value="Fungi"> Fungi</label>
-    <label><input type="checkbox" class="filter" value="Insect"> Insect</label>
-    <label><input type="checkbox" class="filter" value="Amphibian"> Amphibian</label>
-    <label><input type="checkbox" class="filter" value="Reptile"> Reptile</label>
-    <br>
-    <label><input type="checkbox" id="threatenedFilter"> Endangered</label>
-    <label><input type="checkbox" id="invasiveFilter"> Invasive</label>
+      <h4>Filters</h4>
+      <label><input type="checkbox" class="filter" value="Bird"> Bird</label>
+      <label><input type="checkbox" class="filter" value="Mammal"> Mammal</label>
+      <label><input type="checkbox" class="filter" value="Plant"> Plant</label>
+      <label><input type="checkbox" class="filter" value="Fungi"> Fungi</label>
+      <label><input type="checkbox" class="filter" value="Insect"> Insect</label>
+      <label><input type="checkbox" class="filter" value="Amphibian"> Amphibian</label>
+      <label><input type="checkbox" class="filter" value="Reptile"> Reptile</label>
+      <br>
+      <label><input type="checkbox" id="threatenedFilter"> Endangered</label>
+      <label><input type="checkbox" id="invasiveFilter"> Invasive</label>
 
-    <h3>Biodiversity Overview</h3>
-    <div id="bioOverview" style="margin-bottom:10px; font-size:14px; color:#023ad9;"></div>
+      <h3>Biodiversity Overview</h3>
+      <div id="bioOverview" style="margin-bottom:10px; font-size:14px; color:#023ad9;"></div>
 
-    <h3>Biodiversity Markers</h3>
-    <ul id="markerList"></ul>
+      <h3>Biodiversity Markers</h3>
+      <ul id="markerList"></ul>
+    </div>
   </div>
-</div>
-<!-- partial -->
-  <script src='https://unpkg.com/leaflet/dist/leaflet.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js'></script>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js'></script>
-<script src='https://cdn.jsdelivr.net/npm/@turf/turf/turf.min.js'></script><script  src="./script.js"></script>
 
+  <!-- JS Libraries -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.draw/1.0.4/leaflet.draw.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@turf/turf/turf.min.js"></script>
+
+  <!-- Your script -->
+  <script src="./script.js"></script>
 </body>
 </html>
